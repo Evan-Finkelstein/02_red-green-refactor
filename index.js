@@ -1,4 +1,5 @@
 
+const request = require('superagent');
 
 
 
@@ -19,12 +20,19 @@ const capitalizeAndFilter = (arr) => {
     return newArr
 
 };
+const fetchQuotes = async () => {
+    const { body } = await request.get(' futuramaapi.herokuapp.com/api/quotes');
 
+
+    return body.results.slice(0)
+
+};
 
 module.exports = {
     getName,
     copyAndPush,
     capitalizeAndFilter,
+    fetchQuotes
 }
 
 
