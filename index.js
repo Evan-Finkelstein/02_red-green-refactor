@@ -1,8 +1,19 @@
 
 
-const getName = (obj) => {
-    const { name } = obj;
+// const getName = (obj) => {
+//     const { name } = obj;
+//     return name
+// };
+const getName = ({ name } = obj) => {
+
     return name
 };
 
-module.exports = { getName }
+
+
+module.exports = {
+    getName,
+    // copyAndPush,
+}
+
+
