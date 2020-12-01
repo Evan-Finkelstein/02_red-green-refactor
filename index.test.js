@@ -5,3 +5,4 @@ const numbers = [1, 2, 3]
 test('get name', () => expect(getName(spot)).toEqual('spot'));
 
 test('copy and push', () => expect(copyAndPush(numbers, 4)).toEqual([1, 2, 3, 4]));
+test('copy and push original arr', () => expect(numbers).toEqual([1, 2, 3]));
